@@ -24,19 +24,20 @@ class MainActivity : AppCompatActivity() {
         register = findViewById(R.id.register)
 
         register.setOnClickListener{
-            var userText : String = userName.getText().toString()
-            var eamilText = email.getText().toString()
-            var passText = password.getText().toString()
-            var cityText = city.getText().toString()
+            var userEditText : String = userName.getText().toString()
+            var eamilEditText = email.getText().toString()
+            var passEditText = password.getText().toString()
+            var cityEditText = city.getText().toString()
             var contactnum = contact.getText().toString()
             var intent = Intent(this@MainActivity,secondactivity::class.java)
-            intent.putExtra("key",userText)
-            intent.putExtra("key",eamilText)
-            intent.putExtra("key",passText)
-            intent.putExtra("key",cityText)
-            intent.putExtra("key",contactnum)
+            intent.putExtra("user",userEditText)
+            intent.putExtra("email",eamilEditText)
+            intent.putExtra("pass",passEditText)
+            intent.putExtra("city",cityEditText)
+            intent.putExtra("contact",contactnum)
             startActivity(intent)
             finish()
         }
     }
+
 }

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/backgroundcolor">
 
     <ImageView
         android:id="@+id/image"
@@ -12,10 +13,12 @@
         android:layout_height="100dp"
         android:layout_marginTop="32dp"
         android:src="@drawable/profile"
+        app:layout_constraintBottom_toTopOf="@+id/userId"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/userId"
@@ -23,6 +26,7 @@
         android:layout_height="55dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
+        android:background="@drawable/backgroundedit"
         android:hint="Enter your name..."
         android:inputType="text"
         android:textAlignment="center"
@@ -38,6 +42,7 @@
         android:layout_height="55dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
+        android:background="@drawable/backgroundedit"
         android:hint="Enter your email..."
         android:inputType="textEmailAddress"
         android:textAlignment="center"
@@ -52,6 +57,7 @@
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_marginLeft="30dp"
+        android:background="@drawable/backgroundedit"
         android:layout_marginRight="30dp"
         android:hint="Enter your password..."
         android:inputType="textPassword"
@@ -66,6 +72,7 @@
         android:id="@+id/city"
         android:layout_width="match_parent"
         android:layout_height="55dp"
+        android:background="@drawable/backgroundedit"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:hint="Enter your city..."
@@ -81,6 +88,7 @@
         android:id="@+id/contact"
         android:layout_width="match_parent"
         android:layout_height="55dp"
+        android:background="@drawable/backgroundedit"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:hint="Enter your contact number..."
@@ -95,13 +103,18 @@
     <Button
         android:id="@+id/register"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="60dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="56dp"
         android:layout_marginRight="30dp"
+        android:textSize="20sp"
+        android:backgroundTint="#0F648A"
         android:text="Register"
+        app:cornerRadius="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contact" />
+        app:layout_constraintTop_toBottomOf="@+id/contact"
+        app:strokeColor="#5BB9C3"
+        app:strokeWidth="3dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
